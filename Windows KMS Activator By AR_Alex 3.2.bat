@@ -29,14 +29,12 @@ if errorlevel 1 (
 )
 set online=yes
 echo. Checking for updates...
-bitsadmin /Transfer myDownloadJob https://sites.google.com/site/aralexrepo/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
-bitsadmin /Transfer myDownloadJob https://sites.google.com/site/aralexwindows/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
+bitsadmin /Transfer myDownloadJob https://raw.githubusercontent.com/ARAlex143/activator/master/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
 if not exist %temp%\kmsactivator.txt goto certu
 goto continueupd
 :certu
 echo Using certutil to check for updates
-certutil.exe -urlcache -split -f https://sites.google.com/site/aralexrepo/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
-certutil.exe -urlcache -split -f https://sites.google.com/site/aralexwindows/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
+certutil.exe -urlcache -split -f https://raw.githubusercontent.com/ARAlex143/activator/master/kmsactivator.txt %temp%\kmsactivator.txt >nul 2>&1
 :continueupd
 if not exist %temp%\kmsactivator.txt goto DetectWindows
 set /p update= < %temp%\kmsactivator.txt
@@ -523,8 +521,7 @@ goto downloadupdate
 cls
 title. Downloading update from server...
 echo. Downloading update from server...
-bitsadmin /Transfer myDownloadJob https://sites.google.com/site/aralexrepo/KMS_Activator_By_AR_Alex.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip  >nul 2>&1
-bitsadmin /Transfer myDownloadJob https://sites.google.com/site/aralexwindows/KMS_Activator_By_AR_Alex.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip  >nul 2>&1
+bitsadmin /Transfer myDownloadJob https://github.com/ARAlex143/activator/archive/master.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip  >nul 2>&1
 if not exist %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip goto dupdateretry
 echo. 
 echo. Success! The downloaded file is located in: %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip
@@ -536,8 +533,7 @@ exit
 cls
 title. Downloading update from server...
 echo. Downloading update from server using certutil...
-certutil.exe -urlcache -split -f https://sites.google.com/site/aralexrepo/KMS_Activator_By_AR_Alex.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip
-certutil.exe -urlcache -split -f https://sites.google.com/site/aralexwindows/KMS_Activator_By_AR_Alex.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip
+certutil.exe -urlcache -split -f https://github.com/ARAlex143/activator/archive/master.zip %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip
 if not exist %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip echo. Error the update could not be downloaded please contact AR_Alex & pause & goto mainmenu
 echo.
 echo. Success! The downloaded file is located in: %USERPROFILE%\Downloads\KMS_Activator_By_AR_Alex.zip
