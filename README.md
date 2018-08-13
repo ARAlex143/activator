@@ -1,4 +1,4 @@
-Thanks for downloading the Windows KMS Activator By AR_Alex
+Windows 10 KMS Activator By AR_Alex Official Source
 This is Version 3.2 updated on 08/12/2018
 -------------------------------------------------------------------------------------------
 Requirements:
@@ -41,7 +41,7 @@ https://sites.google.com/site/aralexwindows/system/app/pages/recentChanges
 -Everything will be available to the public from now on...
 -Talk to me if you want the full source code for this program in other words "stop stealing code"
 -This program will first check this webisite for updates. It will then ask you to update
-if it finds one. Let's hope google doesn't take this website down for "piracy".
+if it finds one.
 -------------------------------------------------------------------------------------------
 Products Supported:
 -All versions are technically supported
