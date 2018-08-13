@@ -1,5 +1,5 @@
 Windows 10 KMS Activator By AR_Alex Official Source
-
+(Educational Purposes Only)
 This is Version 3.2 updated on 08/12/2018
 -------------------------------------------------------------------------------------------
 Requirements:
