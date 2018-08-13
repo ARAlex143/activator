@@ -41,7 +41,7 @@ https://github.com/ARAlex143/activator
 -Everything will be available to the public from now on...
 -Talk to me if you want the full source code for this program in other words "stop stealing code"
 -This program will first check this webisite for updates. It will then ask you to update
-if it finds one. Let's hope google doesn't take this website down for "piracy".
+if it finds one.
 -------------------------------------------------------------------------------------------
 Products Supported:
 -All versions are technically supported
