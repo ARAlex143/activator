@@ -2,10 +2,13 @@ Thanks for downloading the Windows KMS Activator By AR_Alex
 This is Version 3.2 updated on 08/12/2018
 -------------------------------------------------------------------------------------------
 Requirements:
-1. A computer with Windows 10, Windows 8.1, Windows 7, Windows Server 2012 R2 or Server 2016
-2. A x86 or x64 bit processor
-3. Administrator privileges on the computer
-4. Patience and reading everything carefully
+1. Windows 10, Windows 8.1, Windows 7, Windows Server 2012 R2 or Server 2016 - All editions
+2. Office 2010, 2013, 2016, 2019* - All editions
+3. Windows install has to be legitimate (Modified/ hacked installs will not work at all)
+4. A x86 or x64 bit processor
+5. Works with and without internet
+6. Administrator privileges on the computer
+7. Patience and reading everything carefully
 -------------------------------------------------------------------------------------------
 Credits:
 	  -MDL Developers for the KMS emulator & help
@@ -15,6 +18,17 @@ Credits:
 	  -Wzor for his leaks
 	  -Microsoft for the development of Windows and the "failures"
 	   to fix their activation system.
+-------------------------------------------------------------------------------------------
+Features:      
+	-Activates windows and/ or office suites with a KMS emulator      
+	-Activations are legitimate nothing is hacked or modified      
+	-Any changes can easily be undone
+------------------------------------------------------------------------------------------
+Notes:      
+	-Many antiviruses don't like this activator, so please disable them
+ 	 before unzipping the zip file.
+	-Add the following path to your antivirus exclusions if you install the task:
+	 "C:\Windows\KMS_Service"
 -------------------------------------------------------------------------------------------
 Warning:
 I am not responsible for any damages made to your computer to an extent.
@@ -40,7 +54,7 @@ https://github.com/ARAlex143/activator
 -Everything will be available to the public from now on...
 -Talk to me if you want the full source code for this program in other words "stop stealing code"
 -This program will first check this webisite for updates. It will then ask you to update
-if it finds one. Let's hope google doesn't take this website down for "piracy".
+if it finds one.
 -------------------------------------------------------------------------------------------
 Products Supported:
 -All versions are technically supported
