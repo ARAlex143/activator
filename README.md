@@ -1,6 +1,6 @@
 Windows 10 KMS Activator By AR_Alex Official Source
 (Educational Purposes Only)
-This is Version 3.2 updated on 08/12/2018
+This is Version 3.3 updated on 08/27/2018
 -------------------------------------------------------------------------------------------
 Requirements:
 1. A computer with Windows 10, Windows 8.1, Windows 7, Windows Server 2012 R2 or Server 2016
@@ -26,13 +26,7 @@ Note:	-Bugs will be continously fixed and updates will be pushed.
   	-This program works offline and online.
 -------------------------------------------------------------------------------------------
 Changelog:
-3.2:	-Added full Windows 7 compatibility
-	-Added Office 2019 initial experimental support
-	-Added Office 2010 support
-	-Added Conversion of Retail Office 2016 versions to Volume
-	-Improved reliability throughout
-	-Added support to all versions of Windows 7-10 & Servers
-	-Added support to all versions of Office 2010-2019
+3.3:	-Added digital licence activation (HWID) - Thanks to @s1ave77
 -------------------------------------------------------------------------------------------
 Updates:
 Updates to this program and all of my projects will be posted online at:
