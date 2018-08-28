@@ -228,7 +228,7 @@ set OFFICECHECK=Activate Office 2016
 set office=Office 2016
 set PF=alternative6
 set path6="%installdir%\Program Files (x86)\Microsoft Office\"
-set OSPP=cscript.exe /nologo "%installdir%\Program Files\Microsoft Office\Office16\ospp.vbs"
+set OSPP=cscript.exe /nologo "%installdir%\Program Files (x86)\Microsoft Office\Office16\ospp.vbs"
 )
 
 If Exist "%installdir%\Program Files\Microsoft Office\Office16\OSPP.vbs" ( 
