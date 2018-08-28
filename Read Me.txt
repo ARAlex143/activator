@@ -45,7 +45,7 @@ Note:	-Bugs will be continously fixed and updates will be pushed.
   	-This program works offline and online.
 -------------------------------------------------------------------------------------------
 Changelog:
-3.3:	-Added digital licence activation (HWID) - Thanks to @s1ave77
+3.3:	-Added digital license activation (HWID) - Thanks to @s1ave77
 -------------------------------------------------------------------------------------------
 Updates:
 Updates to this program and all of my projects will be posted online at:
