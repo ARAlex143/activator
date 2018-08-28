@@ -18,17 +18,23 @@ Credits:
 	  -Wzor for his leaks
 	  -Microsoft for the development of Windows and the "failures"
 	   to fix their activation system.
+	  -s1ave77 for the digital license generator research
 -------------------------------------------------------------------------------------------
 Features:      
 	-Activates windows and/ or office suites with a KMS emulator      
 	-Activations are legitimate nothing is hacked or modified      
 	-Any changes can easily be undone
+	-(HWID) Digital Licenses are permanently activated (legitimately)
 ------------------------------------------------------------------------------------------
 Notes:      
 	-Many antiviruses don't like this activator, so please disable them
  	 before unzipping the zip file.
 	-Add the following path to your antivirus exclusions if you install the task:
 	 "C:\Windows\KMS_Service"
+	-(HWID) Digital Licenses cannot be currently undone without a complete
+	 re-format of the disk, it is exactly the same as with OEM OS's. Research is
+	 ongoing on how to easily and effectively uninstall them.
+	-HWID only supports Windows 10, not all editions apply.
 -------------------------------------------------------------------------------------------
 Warning:
 I am not responsible for any damages made to your computer to an extent.
@@ -39,18 +45,12 @@ Note:	-Bugs will be continously fixed and updates will be pushed.
   	-This program works offline and online.
 -------------------------------------------------------------------------------------------
 Changelog:
-3.2:	-Added full Windows 7 compatibility
-	-Added Office 2019 initial experimental support
-	-Added Office 2010 support
-	-Added Conversion of Retail Office 2016 versions to Volume
-	-Improved reliability throughout
-	-Added support to all versions of Windows 7-10 & Servers
-	-Added support to all versions of Office 2010-2019
+3.3:	-Added digital licence activation (HWID) - Thanks to @s1ave77
 -------------------------------------------------------------------------------------------
 Updates:
 Updates to this program and all of my projects will be posted online at:
 https://github.com/ARAlex143/activator
--There will be everything in there from phone activation keys to unreleased beta software.
+-There might be everything in there from phone activation keys to unreleased beta software.
 -Everything will be available to the public from now on...
 -Talk to me if you want the full source code for this program in other words "stop stealing code"
 -This program will first check this webisite for updates. It will then ask you to update
