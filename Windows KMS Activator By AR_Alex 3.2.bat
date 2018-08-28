@@ -40,7 +40,7 @@ if not exist %temp%\kmsactivator.txt goto DetectWindows
 set /p update= < %temp%\kmsactivator.txt
 del %temp%\kmsactivator.txt
 
-if "%update%" == "3.2" goto DetectWindows
+if "%update%" == "3.3" goto DetectWindows
 goto downloadupdate
 
 :DetectWindows
@@ -126,6 +126,10 @@ if "%ERRORLEVEL%" == "0" SET WINVER=Professional Student N
 goto next
 
 :editionid3
+reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID | find "Cloud" >nul
+if "%ERRORLEVEL%" == "0" SET WINVER=Cloud
+reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID | find "Cloud N" >nul
+if "%ERRORLEVEL%" == "0" SET WINVER=Cloud N
 reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID | find "Education" >nul
 if "%ERRORLEVEL%" == "0" SET WINVER=Education
 reg QUERY "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v EditionID | find "Education N" >nul
@@ -415,43 +419,123 @@ title Windows KMS Activator Menu By AR_Alex
 if "%OFFICECHECK%"=="No Office installation detected" set officever=
 echo. Windows KMS Activator Menu By AR_Alex
 echo.
-echo. VERSION: 3.2
+echo. VERSION: 3.3
 echo. 
 echo. Your Windows edition is compatible
 echo. (%SYSTEMID% %WINVER%)
 echo.
 if "%online%"=="yes" echo. Online Mode
 if "%online%"=="no" echo. Offline Mode
-if "%update%" == "3.2" echo. You are using the latest version
+if "%update%" == "3.3" echo. You are using the latest version
 echo.
 echo. Choose Your Option...
 echo.
-echo. (1) Activate %SYSTEMID% %WINVER%
-echo. (2) %OFFICECHECK% %officever%
-echo. (3) Create a Scheduled Task for the Activator
-echo. (4) Convert Retail %office% to Volume
-echo. (5) Fix Windows Activation files
-echo. (6) Check Activation for Windows
-echo. (7) Check Activation for Office
-echo. (8) Activate %SYSTEMID% With Your Own key Using KMS
-echo. (9) Uninstall KMS
+echo. (1) Activate %SYSTEMID% %WINVER% with KMS
+echo. (2) Permanently Activate with a Digital License
+echo. (3) %OFFICECHECK% %officever%
+echo. (4) Create a Scheduled Task for the Activator
+echo. (5) Convert Retail %office% to Volume
+echo. (6) Fix Windows Activation files
+echo. (7) Check Activation for Windows
+echo. (8) Check Activation for Office
+echo. (9) Activate %SYSTEMID% With Your Own key Using KMS
+echo. (u) Uninstall KMS
 echo. (r) Re-Download the Program from Server
 echo. (0) Close the Program
 
 set /p userinp=    ^   Make your selection: 
 set userinp=%userinp:~0,1%
 if /i "%userinp%"=="1" goto wversion
-if /i "%userinp%"=="2" goto officeinfo
-if /i "%userinp%"=="5" goto fix
-if /i "%userinp%"=="4" goto retailtovolume1
-if /i "%userinp%"=="3" goto chooseoption
+if /i "%userinp%"=="2" goto digital
+if /i "%userinp%"=="3" goto officeinfo
+if /i "%userinp%"=="4" goto chooseoption
+if /i "%userinp%"=="5" goto retailtovolume1
+if /i "%userinp%"=="6" goto fix
+if /i "%userinp%"=="7" goto chwindows
+if /i "%userinp%"=="8" goto choffice
+if /i "%userinp%"=="9" goto w8custommenu
+if /i "%userinp%"=="u" goto uninstallkmsm
 if /i "%userinp%"=="0" exit
-if /i "%userinp%"=="7" goto choffice
-if /i "%userinp%"=="6" goto chwindows
-if /i "%userinp%"=="8" goto w8custommenu
-if /i "%userinp%"=="9" goto uninstallkmsm
 if /i "%userinp%"=="r" goto dupdate
 GOTO mainmenu
+
+:digital
+cls
+title Digital License
+if "%systemid%" == "Windows 7" goto digitaluns
+if "%systemid%" == "Windows 8" goto digitaluns
+if "%systemid%" == "Windows 8.1" goto digitaluns
+if "%systemid%" == "" goto digitaluns
+if "%winver%" == "Cloud" set key=V3WVW-N2PV2-CGWC3-34QGF-VMJ2C & set sku=178
+if "%winver%" == "Cloud N" set key=NH9J3-68WK7-6FB93-4K3DF-DJ4F6 & set sku=179
+if "%winver%" == "Core" set key=YTMG3-N6DKC-DKB77-7M9GH-8HVX7 & set sku=101
+if "%winver%" == "Core Country Specific" set key=N2434-X9D7W-8PF6X-8DV9T-8TYMD & set sku=99
+if "%winver%" == "Core N" set key=4CPRK-NM3K3-X6XXQ-RXX86-WXCHW & set sku=98
+if "%winver%" == "Core Single Language" set key=BT79Q-G7N6G-PGBYW-4YWX6-6F4BT & set sku=100
+if "%winver%" == "Education" set key=YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY & set sku=121
+if "%winver%" == "Education N" set key=84NGF-MHBT6-FXBX8-QWJK7-DRR8H & set sku=122
+if "%winver%" == "Enterprise" set key=XGVPP-NMH47-7TTHJ-W3FW7-8HV2C & set sku=4
+if "%winver%" == "Enterprise N" set key=3V6Q6-NQXCX-V8YXR-9QCYV-QPFCT & set sku=27
+if "%winver%" == "Enterprise S" set key=NK96Y-D9CD8-W44CQ-R8YTK-DYJWX & set sku=125
+if "%winver%" == "Enterprise S N" set key=2DBW3-N2PJG-MVHW3-G7TDK-9HKR4 & set sku=126
+if "%winver%" == "Professional" set key=VK7JG-NPHTM-C97JM-9MPGT-3V66T & set sku=48
+if "%winver%" == "Professional Education" set key=8PTT6-RNW4C-6V7J2-C2D3X-MHBPB & set sku=164
+if "%winver%" == "Professional Education N" set key=GJTYN-HDMQY-FRR76-HVGC7-QPF8P & set sku=165
+if "%winver%" == "Professional N" set key=2B87N-8KFHP-DKV6R-Y2C8J-PKCK & set sku=49
+if "%winver%" == "Professional Workstation" set key=DXG7C-N36C4-C4HTG-X4T3X-2YV77 & set sku=161
+if "%winver%" == "Professional Workstation N" set key=WYPNQ-8C467-V2W6J-TX4WX-WT2RQ & set sku=162
+if "%sku%" == "" goto digitaluns
+if "%key%" == "" goto digitaluns
+echo. This option will permanently and legitimately activate
+echo. %systemid% %winver% using a digital license directly from microsoft.
+echo.
+echo. (1) Continue
+echo. (2) Go back to the Main Menu
+set /p userinp=    ^   Make your selection: 
+set userinp=%userinp:~0,1%
+if /i "%userinp%"=="1" goto digitalcont
+if /i "%userinp%"=="2" goto mainmenu
+goto mainmenu
+
+:digitaluns
+cls
+echo.
+echo. %systemid% %winver% is Unsupported at this time
+echo. If you believe this is a mistake contact me asap.
+echo. 
+pause
+goto mainmenu
+
+:digitalcont
+cls
+title Digital License
+echo. Installing product key for %systemid% %winver%...
+echo.
+cscript.exe /nologo %WINDIR%\System32\slmgr.vbs /ipk %key%
+cd /d "%~dp0"
+set "gatherosstate=Digital\gatherosstate.exe"
+echo. Setting up registry...
+reg add "HKLM\SYSTEM\Tokens" /v "Channel" /t REG_SZ /d "Retail" /f
+reg add "HKLM\SYSTEM\Tokens\Kernel" /v "Kernel-ProductInfo" /t REG_DWORD /d %sku% /f
+reg add "HKLM\SYSTEM\Tokens\Kernel" /v "Security-SPP-GenuineLocalStatus" /t REG_DWORD /d 1 /f
+echo.
+echo Generating GenuineTicket.xml...
+start /wait "" "%gatherosstate%"
+timeout /t 3 >nul 2>&1
+echo.
+echo. Migrating Windows Genuine Authorization blob...
+echo.
+clipup -v -o -altto Digital\
+echo. Activating...
+echo.
+cscript /nologo %windir%\system32\slmgr.vbs -ato
+cscript /nologo %windir%\system32\slmgr.vbs -dli
+cscript /nologo %windir%\system32\slmgr.vbs -xpr
+echo. Deleting registry entries...
+reg delete "HKLM\SYSTEM\Tokens" /f
+pause
+goto done
+
 
 :uninstallkmsm
 cls
@@ -467,7 +551,7 @@ set /p userinp=    ^   Make your selection:
 set userinp=%userinp:~0,1%
 if /i "%userinp%"=="1" goto uninstallkms
 if /i "%userinp%"=="2" goto mainmenu
-if /i "%userinp%" gtr "2" goto mainmenu
+goto mainmenu
 
 :uninstallkms
 cls
