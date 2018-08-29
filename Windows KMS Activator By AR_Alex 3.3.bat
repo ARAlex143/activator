@@ -792,12 +792,12 @@ echo. (7) Go back to the Main Menu
 
 set /p userinp=    ^   Make your selection: 
 set userinp=%userinp:~0,1%
-if /i "%userinp%"=="1" set convertpth=Proplus16& goto convertproplus6
-if /i "%userinp%"=="2" set convertpth=Standard16& goto convertproplus6
-if /i "%userinp%"=="3" set convertpth=Projectstd16& goto convertproplus6
-if /i "%userinp%"=="4" set convertpth=Projectpro16& goto convertproplus6
-if /i "%userinp%"=="5" set convertpth=Visiostd16& goto convertproplus6
-if /i "%userinp%"=="6" set convertpth=Visiopro16& goto convertproplus6
+if /i "%userinp%"=="1" set convertpth=Proplus16& set key=XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99& goto convertproplus6
+if /i "%userinp%"=="2" set convertpth=Standard16& set key=JNRGM-WHDWX-FJJG3-K47QV-DRTFM& goto convertproplus6
+if /i "%userinp%"=="3" set convertpth=Projectstd16& set key=GNFHQ-F6YQM-KQDGJ-327XX-KQBVC& goto convertproplus6
+if /i "%userinp%"=="4" set convertpth=Projectpro16& set key=YG9NW-3K39V-2T3HJ-93F3Q-G83KT& goto convertproplus6
+if /i "%userinp%"=="5" set convertpth=Visiostd16& set key=7WHWN-4T7MP-G96JF-G33KR-W8GF4& goto convertproplus6
+if /i "%userinp%"=="6" set convertpth=Visiopro16& set key=PD3PC-RHNGV-FXJ29-8JK7D-RJRJK& goto convertproplus6
 if /i "%userinp%"=="7" goto mainmenu
 
 :convertproplus6
@@ -807,6 +807,7 @@ if /i not exist Office_Files\ goto error1
 echo. Installing Volume License.
 pushd "%~dp0"
 for /f %%x in ('dir /b Office_Files\%convertpth%\*.xrm-ms') do %ospp% /inslic:Office_Files\%convertpth%\%%x
+%OSPP% /inpkey:%KEY%
 echo.
 echo. Success you should now have %office% %convertpth% Volume Edition
 pause.
@@ -826,9 +827,9 @@ echo. (4) Go back to the Main Menu
 
 set /p userinp=    ^   Make your selection: 
 set userinp=%userinp:~0,1%
-if /i "%userinp%"=="1" set convertpth=Proplus13& goto convertproplus15
-if /i "%userinp%"=="2" set convertpth=Project13& goto convertproplus15
-if /i "%userinp%"=="3" set convertpth=Visio13& goto convertproplus15
+if /i "%userinp%"=="1" set convertpth=Proplus13& set key=YC7DK-G2NP3-2QQC3-J6H88-GVGXT& goto convertproplus15
+if /i "%userinp%"=="2" set convertpth=Project13& set key=FN8TT-7WMH6-2D4X9-M337T-2342K& goto convertproplus15
+if /i "%userinp%"=="3" set convertpth=Visio13& set key=C2FG9-N6J68-H8BTJ-BW3QX-RM3B3& goto convertproplus15
 if /i "%userinp%"=="4" goto mainmenu
 GOTO retailtovolume13
 
@@ -836,6 +837,7 @@ GOTO retailtovolume13
 if /i not exist Office_Files\ goto error1
 for /f %%x in ('dir /b Office_Files\%convertpth%\*.xrm-ms') do %ospp% /inslic:Office_Files\%convertpth%\%%x
 regedit /s Office_Files\%convertpth%\%convertpth%.reg
+%OSPP% /inpkey:%KEY%
 if /i not %errorlevel%==0 goto error2
 echo.
 echo. Success you should now have %office% %convertpth% Volume Edition
