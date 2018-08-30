@@ -564,18 +564,6 @@ cscript.exe /nologo %WINDIR%\System32\slmgr.vbs /cpky
 cscript.exe /nologo %WINDIR%\System32\slmgr.vbs /rilc
 sc stop sppsvc
 sc start sppsvc
-echo. Uninstalling Office KMS activations
-if "%PF%" == "alternative" set OSPP=cscript.exe /nologo "%installdir%\Program Files (x86)\Microsoft Office\Office15\ospp.vbs"
-if "%PF%" == "normal" set OSPP=cscript.exe /nologo "%installdir%\Program Files\Microsoft Office\Office15\ospp.vbs"
-if "%PF%" == "alternative6" set OSPP=cscript.exe /nologo "%installdir%\Program Files (x86)\Microsoft Office\Office16\ospp.vbs"
-if "%PF%" == "normal6" set OSPP=cscript.exe /nologo "%installdir%\Program Files\Microsoft Office\Office16\ospp.vbs"
-%OSPP% /unpkey:GVGXT >nul 2>&1
-%OSPP% /unpkey:WFG99 >nul 2>&1
-%OSPP% /unpkey:92CD4 >nul 2>&1
-%OSPP% /unpkey:2342K >nul 2>&1
-%OSPP% /unpkey:8QHTT >nul 2>&1
-%OSPP% /unpkey:RM3B3 >nul 2>&1
-%OSPP% /unpkey:PGWR7 >nul 2>&1
 echo. Uninstalling Scheduled tasks created by this software
 schtasks /delete /f /tn "KMS Service"
 echo. Deleting files
